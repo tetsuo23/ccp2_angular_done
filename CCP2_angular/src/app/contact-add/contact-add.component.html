@@ -1,0 +1,109 @@
+<div class="container justify-content-center col-12 " id="page5">
+  <div class="row">
+    <legend class="col-12 col-md-7 col-xl-8 d-flex justify-content-start align-items-center">
+      <h3>&lt; h3 &gt; Contactez-nous &lt; /h3 &gt;</h3>
+    </legend>
+    <div class="col-6 col-md-2 col-xl-2 hand">
+      <img src="../../assets/img/good2.png" alt="" srcset="">
+    </div>
+    <div class="col-6 col-md-2">
+      <button class="btn btn-secondary" [routerLink]="['/']">
+        <img src="../../assets/img/cross.png" alt="" srcset="../../assets/img/cross.png 1x">
+      </button>
+    </div>
+  </div>
+  <!--  <div class="row">
+    <div class="col-8 offset-2" id="rdv">
+      <div class="well well-sm">
+        <form class="form-horizontal" action="" method="">
+          <fieldset id="rendez">
+
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="name">Name</label>
+              <div class="col-md-9">
+                <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="email">Your E-mail</label>
+              <div class="col-md-9">
+                <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-md-3 control-label" for="Contact">Your Contact</label>
+              <div class="col-md-9">
+                <textarea class="form-control" id="Contact" name="Contact" placeholder="Please enter your Contact here..." rows="5"></textarea>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-secondary btn-lg">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+  <div class="card">
+    <div class="card-body">
+      <form [formGroup]="angForm" id="form">
+        <div class="row">
+          <div class="form-group col-md-6 col-xl-6">
+            <label class="col-md-12"> Name</label>
+            <input type="text" class="form-control" formControlName="Name" #Name />
+
+          </div>
+          <div *ngIf="angForm.controls['Name'].invalid && (angForm.controls['Name'].dirty || angForm.controls['Name'].touched)" class="alert alert-danger">
+
+            <div *ngIf="angForm.controls['Name'].errors.required">
+
+              Name is required.
+            </div>
+          </div>
+
+
+          <div class="form-group col-md-6 col-xl-6">
+            <label class="col-md-12"> Mail</label>
+            <input type="email" class="form-control" formControlName="Mail" #Mail />
+
+          </div>
+          <div *ngIf="angForm.controls['Mail'].invalid && (angForm.controls['Mail'].dirty || angForm.controls['Mail'].touched)" class="alert alert-danger">
+
+            <div *ngIf="angForm.controls['Mail'].errors.required">
+              Mail is required.
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">Contact</label>
+          <textarea class="form-control" rows=7 cols="5" formControlName="Contact" #Contact></textarea>
+
+        </div>
+        <div *ngIf="angForm.controls['Contact'].invalid && (angForm.controls['Contact'].dirty || angForm.controls['Contact'].touched)" class="alert alert-danger">
+
+          <div *ngIf="angForm.controls['Contact'].errors.required">
+            Contact is required.
+          </div>
+        </div>
+        <div class="form-group">
+
+          <button type="submit" class="btn btn-primary" [disabled]="angForm.pristine || angForm.invalid"
+            (click)="addContact(angForm.controls['Name'].value, angForm.controls['Mail'].value, angForm.controls['Contact'].value)">Envoyer
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

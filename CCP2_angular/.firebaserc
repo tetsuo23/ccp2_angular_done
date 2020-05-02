@@ -1,0 +1,15 @@
+{
+  "targets": {
+    "tetsuo-project": {
+      "hosting": {
+        "correctionCcp1Angular": [
+          "tetsuo-project"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tetsuo-project",
+    "tetsuo-Project": "tetsuo-project"
+  }
+}

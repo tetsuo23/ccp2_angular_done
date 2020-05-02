@@ -1,0 +1,67 @@
+#page6 {
+  padding: 0;
+  padding-top: 10%;
+  margin: 0;
+  height: 450vh;
+  width: 100%;
+  background-image: url(../../assets/img/curve-design-futuristic-lines-50H.png);
+  background-size: cover;
+  background-attachment: fixed;
+  box-sizing: border-box;
+}
+
+#intro {
+  border-top: 2px dotted black;
+  margin: 0;
+
+}
+
+.projet {
+  background-color: #00000088;
+  margin-top: 1%;
+  padding: 2%;
+}
+
+#projet_button {
+  background-color: transparent;
+  margin-top: 5%;
+  width: 100%
+}
+
+#projet_content {
+  margin: 0;
+  margin-top: 2%;
+
+}
+
+p {
+  margin: 0;
+  margin-top: 1%;
+  padding: 2%;
+}
+
+.light img {
+  height: 100px;
+}
+
+.btn-secondary {
+  background-color: rgb(124, 122, 122);
+  box-shadow: 1px 1px 5px rgb(235, 235, 235);
+}
+
+@media screen and (min-width:961px) {
+  #page6 {
+    height: 200vh;
+  }
+
+  .light img {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  .btn-secondary:hover {
+    background-color: rgb(187, 7, 52);
+    text-decoration: none;
+  }
+}

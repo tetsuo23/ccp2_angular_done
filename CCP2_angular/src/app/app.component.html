@@ -1,0 +1,257 @@
+<div class="container-fluid" id="page1">
+  <nav class="nav d-flex align-items-center">
+    <div class="container" id="nav1">
+      <div class="logo col-md-2 col-2">
+        <a href="#">
+          <img src="../assets/img/LOGO.png" class="img-fluid" id="logo" alt="logo" srcset="../assets/img/LOGO.png 1x"></a>
+      </div>
+      <div class="row">
+        <span class="navTrigger d-none d-md-block col-md-8 col-xl-7 offset-xl-1 ">
+          <h1 id="titre" class="d-flex align-items-center"><strong>Webmag-agency</strong></h1>
+        </span>
+
+
+
+
+        <div id="mainListDiv" class="main_list col-7 col-md-3 col-xl-4 ">
+          <ul class="navbar-nav mr-auto navlinks" routerLinkActive="active">
+            <li>
+              <a href="https://twitter.com/" target="_blank">
+                <img src="../assets/img/twitter.png" class="img-fluid icone" alt="twitter" srcset="../assets/img/twitter.png 1x">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/" target="_blank">
+                <img src="../assets/img/facebook.png" class="img-fluid icone" alt="facebook" srcset="../assets/img/facebook.png 1x"></a>
+            </li>
+            <li>
+              <a href="https://fr.linkedin.com/" target="_blank">
+                <img src="../assets/img/linkedin.png" class="img-fluid icone" alt="linkedin" srcset="../assets/img/linkedin.png 1x"></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/" target="_blank">
+                <img src="../assets/img/youtube.png" class="img-fluid icone" alt="youtube" srcset="../assets/img/youtube.png 1x"></a>
+            </li>
+            <li routerLinkActive="active">
+              <a href="#" routerLink="search">
+                <img src="../assets/img/search.png" class="img-fluid icone" alt="menu" srcset="../assets/img/search.png 1x">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <span class="d-md-none  d-sm-block col-4">
+
+
+
+          <div class="row" *ngIf="!isLoggedIn">
+
+            <a href="#" class="nav-link col-6 col-xl-3 d-flex align-items-center" routerLink="member/create">
+              <p>Sign Up</p>
+            </a>
+            <a href="#" class="nav-link col-6 col-xl-2 d-flex align-items-center" routerLink="connexion">
+              <p>Login</p>
+            </a>
+
+          </div>
+
+
+
+
+          <div class="row" id="nav_smart" routerLinkActive="active">
+
+            <li class="nav-item col-6 col-xl-6" *ngIf="showAdminBoard">
+              <a href="/admin" class="nav-link" routerLink="admin">
+                <p>Admin</p>
+              </a>
+            </li>
+            <li class="nav-item col-7 col-xl-7" *ngIf="showModeratorBoard">
+              <a href="/mod" class="nav-link" routerLink="mod">
+                <p>Moderator</p>
+              </a>
+            </li>
+
+
+
+
+            <li class="nav-item col-6 col-xl-3" *ngIf="isLoggedIn">
+              <a href class="nav-link" (click)="logout()">
+                <p>LogOut</p>
+              </a>
+            </li>
+          </div>
+        </span>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+    <!-- ---------------------------- deuxième menu horizontal-------------------- -->
+
+
+  </nav>
+  <div class="nav2 d-none d-md-block" id="nav2">
+    <div class="row d-flex ">
+      <div class="col-7 offset-8 col-md-7 offset-md-5 ">
+        <ul *ngIf="!isLoggedIn">
+          <div class="row d-flex justify-content-end nav2_text">
+
+            <a href="#" class="nav-link col-3 col-xl-3" routerLink="member/create">
+              <p>Sign Up</p>
+            </a>
+
+
+            <a href="#" class="nav-link col-2 col-xl-2" routerLink="connexion">
+              <p>Login</p>
+            </a>
+
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-7 offset-9 col-md-7 offset-md-5 col-xl-3 offset-xl-9" *ngIf="isLoggedIn">
+        <ul class="navbar-nav mr-auto navlinks col-6 offset-6 col-xl-11 offset-xl-1" routerLinkActive="active">
+
+          <div class="row d-flex justify-content-center nav2_text">
+            <li class="nav-item col-6 col-md-9" *ngIf="isLoggedIn">
+              <a href="/admin" class="nav-link" routerLink="admin">
+                <p>Admin Board</p>
+              </a>
+            </li>
+            <li class="nav-item col-7 col-md-6" *ngIf="showModeratorBoard">
+              <a href="/mod" class="nav-link" routerLink="mod">
+                <p>Moderator Board</p>
+              </a>
+            </li>
+            <!-- <li class="nav-item col-2 col-xl-3" *ngIf="isLoggedIn">
+              <a href="/home" class="nav-link" routerLink="/">
+                <p>Home</p>
+              </a>
+            </li> -->
+
+            <li class="nav-item col-3 col-xl-3" *ngIf="isLoggedIn">
+              <a href class="nav-link" (click)="logout()">
+                <p>LogOut</p>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+</div>
+<div class="container-fluid" id="page2">
+  <div class="container-fluid d-none d-xl-block" id="card">
+    <app-card></app-card>
+  </div>
+  <app-accueil></app-accueil>
+  <div class="container-fluid d-none d-md-block d-xl-none nav_a">
+    <div class="row  justify-content-around">
+      <div class="col-md-2 col-5 a_nav">
+        <a href="#work">
+          <a type="a" class="btn btn-secondary btn-lg">Réalisations</a>
+        </a>
+      </div>
+      <div class="col-md-2 offset-md-8 col-5  a_nav">
+        <a href="#page6">
+          <a type="a" class="btn btn-secondary btn-lg">Projets</a>
+        </a>
+      </div>
+      <div class="col-md-2 col-5 a_nav">
+        <a href="#page7">
+          <a type="a" class="btn btn-secondary btn-lg">Services</a>
+        </a>
+      </div>
+      <div class="col-md-2 offset-md-8 col-5  a_nav">
+        <a href="#blog">
+          <a type="a" class="btn btn-secondary btn-lg">Blog</a>
+        </a>
+      </div>
+      <div class="col-md-2 col-5 a_nav">
+        <a href="#page8">
+          <a type="a" class="btn btn-secondary btn-lg">Nous connaitre</a>
+        </a>
+      </div>
+      <div class="col-md-2 offset-md-8 col-5 a_nav">
+        <a href="#work">
+          <a type="a" class="btn btn-secondary btn-lg">Co-working</a>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid d-lg-none" id="a">
+    <div class="row  justify-content-around">
+      <div class=" col-5 col-md-3 offset-xl-3 d-flex justify-content-center">
+        <a href="#page4" target="_blank">
+          <a type="a" class="btn btn-secondary btn-lg">Recrutement</a>
+        </a>
+      </div>
+      <div class=" col-5 col-md-3 offset-xl-2 d-flex justify-content-center">
+        <a href="#" routerLink="contact/create">
+          <a type="a" class="btn btn-secondary btn-lg">Prendre RDV</a>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container-fluid d-block d-md-none nav_a">
+    <div class="row  justify-content-around">
+      <div class="col-md-2 col-5 offset-1 a_nav">
+        <a href="#work">
+          <a type="a" class="btn btn-secondary btn-lg">Réalisations</a>
+        </a>
+      </div>
+      <div class="col-md-2 offset-md-8 col-5  a_nav">
+        <a href="#page6">
+          <a type="a" class="btn btn-secondary btn-lg">Projets</a>
+        </a>
+      </div>
+      <div class="col-md-2 col-5 offset-1 a_nav">
+        <a href="#page7">
+          <a type="a" class="btn btn-secondary btn-lg">Services</a>
+        </a>
+      </div>
+      <div class="col-md-2 offset-md-8 col-5  a_nav">
+        <a href="#blog">
+          <a type="a" class="btn btn-secondary btn-lg">Blog</a>
+        </a>
+      </div>
+      <div class="col-md-2 col-5 offset-1 a_nav">
+        <a href="#page8">
+          <a type="a" class="btn btn-secondary btn-lg">Nous connaitre</a>
+        </a>
+      </div>
+      <div class="col-md-2 offset-md-8 col-5 a_nav">
+        <a href="#work">
+          <a type="a" class="btn btn-secondary btn-lg">Co-Working</a>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+<app-recrutement></app-recrutement>
+<app-contact></app-contact>
+<app-projet></app-projet>
+<app-prestations></app-prestations>
+<app-google></app-google>
+<app-post-show></app-post-show>
+
+<app-footer></app-footer>
+<app-work-in-progress></app-work-in-progress>

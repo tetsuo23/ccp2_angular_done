@@ -1,0 +1,65 @@
+#createForm {
+  height: 57vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  background-color: #6C805CDD;
+  font-family: play;
+  color: #333;
+  overflow-y: scroll;
+  animation: appear .75s ease-in-out;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  background-color: #6C805C;
+  border: 1px solid black;
+}
+
+label {
+  color: #333 !important;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+@media screen and (min-width:961px) {
+
+  /*  --------- forms -------- */
+  #createForm {
+    height: 96vh;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .btn-secondary {
+    height: 65%;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  #createForm {
+    height: 73vh;
+    top: 113%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+
+}

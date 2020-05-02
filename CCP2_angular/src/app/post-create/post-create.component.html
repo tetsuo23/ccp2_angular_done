@@ -1,0 +1,35 @@
+<div class="container" id="createForm">
+  <div class="card mb-8" style="margin-top: 25px">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 col-md-9 d-flex justify-content-start">
+          <h3>&lt; h2 &gt; Nouveau blog &lt; /h2 &gt;</h3>
+        </div>
+        <div class="col-3  offset-xl-1 col-md-2">
+          <button class="btn btn-secondary" [routerLink]="['/admin']">
+            <p>Return</p>
+          </button>
+        </div>
+      </div>
+      <form [formGroup]="angForm" (submit)='addPost(title, content)'>
+        <div class="form-group">
+          <label for="title" class="text-info">Titre</label>
+          <input type="text" id="title" class="form-control" formControlName="title" #title>
+        </div>
+        <div class="form-group">
+          <label for="content" class="text-info">Contenu</label>
+          <textarea class="form-control" id="content" rows="5" formControlName="content" #content></textarea>
+        </div>
+
+
+        <a href="" routerLink="/adminPost"><button type="submit" class="float-right btn btn-warning" style="margin-bottom: 5px" [disabled]="angForm.pristine || angForm.invalid"
+            (click)="addPost(angForm.controls['title'].value, angForm.controls['content'].value)">
+
+            Create post
+
+          </button></a>
+      </form>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,72 @@
+#page7 {
+  height: 650vh;
+  margin-top: 10%;
+
+  padding: 0;
+  background-image: url(../../assets/img/presta2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  box-sizing: border-box;
+}
+
+
+.presta {
+  border: 1px solid #333;
+  background-color: #00000088;
+  margin: 1%;
+}
+
+.presta2 {
+  border: 1px solid #333;
+  background-color: #000000BB;
+  margin: 1%;
+  color: rgb(235, 235, 235);
+  border-radius: 1%;
+}
+
+.presta2 img {
+  width: 100%;
+
+}
+
+#presta {
+  margin: 0;
+}
+
+
+.prestation img {
+  height: 200px;
+
+}
+
+
+
+.btn-secondary {
+  margin-bottom: 5%;
+  box-shadow: 1px 1px 15px rgb(235, 235, 235);
+  border: 1px solid white
+}
+
+@media screen and (min-width:961px) {
+  #page7 {
+    height: 500vh;
+  }
+
+  .presta2 {
+    margin: 0;
+  }
+
+  .smart {
+    margin: 0;
+  }
+
+
+}
+
+@media screen and (min-width:1280px) {
+  #page7 {
+    height: 160vh;
+  }
+
+
+}

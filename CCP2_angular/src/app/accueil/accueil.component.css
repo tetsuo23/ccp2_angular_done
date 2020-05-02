@@ -1,0 +1,183 @@
+/* ngb-carousel {
+  max-width: 700px;
+  margin: 0;
+} */
+ngb-carousel {
+  max-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+ngb-carousel img {
+  width: 100%;
+  outline: none;
+}
+
+ngb-carousel {
+  width: inherit;
+  height: inherit;
+}
+
+.carousel-inner {
+  overflow: visible;
+}
+
+.carousel-item {
+  display: flex !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease-in-out, visibility 1.2s;
+  z-index: -1;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+
+}
+
+.carousel-caption {
+  left: -2%;
+  right: 0;
+  bottom: 45%;
+  background-color: #00000066;
+  padding: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+
+button {
+  height: 75%;
+  display: flex;
+  align-items: center;
+}
+
+.btn-secondary {
+  background-color: rgb(124, 122, 122);
+  box-shadow: 1px 1px 5px rgb(235, 235, 235);
+  border: 1px solid black;
+  z-index: 999;
+}
+
+@media screen and (min-width:961px) {
+  ngb-carousel {
+    max-width: 680px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+
+  .carousel-caption {
+    position: absolute;
+    bottom: 50%;
+    left: -1%;
+    background-color: #00000066
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    top: -7%;
+    z-index: 990;
+  }
+
+  .carousel-control-prev {
+    z-index: 999;
+    position: absolute;
+    top: -7%;
+    bottom: 102% !important
+  }
+
+  .carousel-control-next {
+    z-index: 999;
+    position: absolute;
+    top: -7%;
+    bottom: 102% !important
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-family: 'Play', sans-serif;
+    letter-spacing: .2em;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    bottom: 60%;
+    width: 100%;
+    left: 0%;
+    background-color: #000000BB
+  }
+
+
+}
+
+@media screen and (min-width:1280px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  button {
+    height: 300%;
+
+  }
+
+  #button {
+    position: relative;
+    bottom: -20%;
+    margin-left: 2.5%
+  }
+
+  #main_button {
+    position: absolute;
+    top: 30%;
+    margin-left: 0;
+
+  }
+
+  ngb-carousel {
+    max-width: 700px;
+    position: absolute;
+    top: 40%;
+    left: 47%;
+    transform: translate(-50%, -40%);
+    width: 50%;
+  }
+
+  ngb-carousel img {
+    width: 80%;
+  }
+
+  .carousel-caption {
+    width: 80%;
+    bottom: 55%;
+  }
+
+  .carousel-indicators {
+    left: 80px;
+  }
+
+  .carousel-inner {
+    width: 115%;
+  }
+
+
+  h3 {
+    font-size: 2.5rem;
+    font-family: 'Play', sans-serif;
+    letter-spacing: .2em;
+  }
+
+  .btn-secondary {
+    background-color: rgb(124, 122, 122);
+    box-shadow: 1px 1px 5px rgb(235, 235, 235);
+  }
+
+  .btn-secondary:hover {
+    background-color: #BA0734;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,508 @@
+ngb-carousel {
+  max-width: 700px;
+  margin: 50px auto;
+}
+
+ngb-carousel img {
+  width: 100%;
+  outline: none;
+}
+
+ngb-carousel {
+  width: inherit;
+  height: inherit;
+}
+
+.carousel-inner {
+  overflow: visible;
+}
+
+.carousel-item {
+  display: flex !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease-in-out, visibility 1.2s;
+  z-index: -1;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  background-image: url(../assets/img/background-abstract-1065003_1280.jpg);
+  font-family: 'Quicksand';
+  font-size: 14px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.375rem;
+  font-family: 'Roboto', sans-serif;
+  color: #EBEBEB;
+  position: absolute;
+  top: 32%;
+  left: 40%;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+#page1 {
+  height: 45%;
+  margin-bottom: 45%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+#page2 {
+  height: 100%;
+  margin-top: 0;
+}
+
+#page10 {
+  position: relative;
+  height: 32%;
+  padding: 0;
+}
+
+#pageEnd {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  background-color: rgb(124, 122, 122);
+}
+
+#titre {
+  transform: translateX(-50%);
+}
+
+/* -------------------------------------- */
+.nav {
+  width: 98%;
+  height: 40px;
+  position: fixed;
+  line-height: 65px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #00000066;
+  z-index: 800;
+  padding: 5px;
+  margin-right: 3%;
+}
+
+.nav_scroll {
+  background-color: rgb(156, 155, 155);
+}
+
+.nav_scroll2 {
+  background-color: #6C805C;
+}
+
+.nav div.logo {
+  float: left;
+  width: auto;
+  height: auto;
+  padding-left: 0rem;
+}
+
+#logo {
+  width: 100%;
+  min-width: 75px;
+}
+
+.nav div.main_list {
+  height: 64px;
+  float: right;
+  padding: 0;
+  margin-right: 3%;
+}
+
+.nav div.main_list ul {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav div.main_list ul li {
+  width: auto;
+  height: 75px;
+  padding: 0;
+  padding-left: 1rem;
+  top: 10px;
+}
+
+.nav div.main_list ul li a {
+  text-decoration: none;
+  color: #EBEBEB;
+  line-height: 60px;
+  font-size: 1.5rem;
+}
+
+.main_list {
+  margin-right: 5%;
+}
+
+.icone {
+  vertical-align: top;
+  margin-top: 22%;
+  height: 40%;
+}
+
+/* modification de la première nav pour coller le logo à gauche */
+#nav1,
+#nav3 {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+#nav1,
+#nav2,
+#nav3 {
+  position: fixed;
+}
+
+#nav1 {
+  height: 40px;
+}
+
+.nav2 {
+  right: 0;
+  height: 5%;
+  width: 100%;
+  min-width: 5rem;
+  background-color: #000000BB;
+  margin-top: 5.6%;
+}
+
+#nav3 {
+  background-color: #ffffff11;
+  height: 10%;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.navbar {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding-bottom: 7%;
+  justify-content: center;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  height: 64px;
+}
+
+.navTrigger {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 65px;
+  letter-spacing: 1em;
+  font-weight: bold;
+}
+
+.nav_button {
+  position: absolute;
+  top: 115%;
+  height: 100vh;
+}
+
+.button_nav {
+  height: 25vh;
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+
+a {
+  color: rgb(235, 235, 235)
+}
+
+#button {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  margin-left: 2%;
+  padding-left: 0;
+}
+
+.btn-secondary {
+  box-shadow: 1px 1px 5px rgb(235, 235, 235);
+  margin-bottom: 4%;
+}
+
+
+
+
+/* animation searchbar */
+.card {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  z-index: 999;
+  animation: search 1s;
+}
+
+.nav2_text {
+
+  height: 64px;
+}
+
+#nav_smart {
+  height: 35%;
+}
+
+.nav-item {
+  height: 20px;
+  line-height: 20px;
+}
+
+@keyframes search {
+  0% {
+    top: -20%;
+    left: -20%
+  }
+
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* fin d'animation searchbar */
+@media screen and (min-width:961px) {
+  #button {
+    bottom: 10%;
+    margin-left: 3.5%;
+  }
+
+  .nav {
+    height: 10%;
+    padding-top: 0;
+  }
+
+  .nav div.main_list {
+    padding-top: 1%;
+  }
+
+  .nav div.main_list ul {
+    height: 42px;
+  }
+
+  .nav div.main_list ul li {
+    height: 40px;
+    width: 21%;
+  }
+
+  .icone {
+    vertical-align: top;
+    margin-top: 22%;
+    height: 60%;
+    width: 100%;
+  }
+
+  h1 {
+    top: 20%;
+  }
+
+  #page1 {
+    margin: 0;
+    height: 15vh;
+  }
+
+  #page2 {
+    margin-top: 13vh;
+  }
+
+
+
+  .nav_button {
+    top: 25%;
+  }
+
+  .navTrigger {
+    letter-spacing: .8em;
+  }
+
+  .nav2 {
+
+    right: 0;
+    height: 4%;
+    width: 98%;
+    /*! max-width: 5%; */
+    min-width: 5rem;
+    background-color: #00000033;
+    margin-top: 5.5%;
+    margin-right: 1%;
+
+  }
+
+  .nav_scroll2 {
+    background-color: #6C805C;
+    z-index: 99;
+  }
+
+  .nav_a {
+    height: 55%;
+  }
+
+  .btn-secondary {
+    margin-bottom: 25%;
+  }
+
+
+}
+
+
+
+
+
+
+@media screen and (min-width:1280px) {
+  h1 {
+    top: 20%;
+  }
+
+  #mainListDiv {
+    margin: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .nav {
+    height: 6% !important;
+  }
+
+  .nav2 {
+    margin-top: 3.5%;
+  }
+
+  .nav_scroll {
+    background-color: rgb(156, 155, 155);
+    height: 10%;
+  }
+
+  #page1 {
+    margin: 0;
+    height: 30vh;
+
+  }
+
+  #page2 {
+    margin-top: 38vh;
+
+  }
+
+  .nav_button {
+    background-color: rgb(124, 122, 122);
+
+  }
+
+  .nav div.main_list ul li {
+    height: 21px;
+    width: 19%;
+  }
+
+  .nav div.main_list ul {
+    height: 34px;
+  }
+
+  .nav div.main_list ul li actif {
+    transform: scale(1.5);
+    color: #EBEBEB;
+  }
+
+  .nav div.main_list {
+    padding-top: 0;
+
+  }
+
+  #logo {
+    width: 100%;
+  }
+
+  #titre {
+    top: 15%;
+  }
+
+  .icone {
+    height: 100%;
+    width: 70%;
+    margin-top: 30%;
+  }
+
+  a {
+    z-index: 1;
+  }
+
+  p {
+    text-shadow: 1px 1px 10px black;
+    font-size: 1.1rem;
+  }
+
+  /* .nav2 {
+
+    right: 0;
+    height: 5%;
+    width: 98%;
+    
+  min-width: 5rem;
+  background-color: #00000033;
+  margin-top: 5.6%;
+  margin-right: 1%;
+
+}
+
+.nav_scroll2 {
+  background-color: #6C805C;
+  z-index: 99;
+}
+
+*/
+  .nav2 li {
+    z-index: 900;
+  }
+
+  #nav_text {
+    z-index: 9999;
+  }
+
+  .navTrigger {
+    letter-spacing: 1em;
+  }
+
+  img {
+    height: 15vh;
+  }
+
+
+
+}

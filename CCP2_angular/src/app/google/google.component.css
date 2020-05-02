@@ -1,0 +1,38 @@
+#page8 {
+  height: 200vh;
+  margin-top: 10%;
+
+  margin-right: 1%;
+}
+
+h2 {
+  margin: 0;
+}
+
+.google {
+  width: 100%;
+}
+
+.boussole img {
+  height: 100px;
+}
+
+.carte {
+  margin-top: 5%;
+  border: 1px solid #333;
+  background-color: #00000066;
+  margin-left: 2%;
+
+}
+
+@media screen and (min-width:961px) {
+  .boussole img {
+    height: 170px;
+  }
+
+  #page8 {
+    height: 110vh;
+  }
+
+
+}

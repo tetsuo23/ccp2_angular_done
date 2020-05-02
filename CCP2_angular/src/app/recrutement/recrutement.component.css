@@ -1,0 +1,68 @@
+#page4 {
+  padding: 0;
+  padding-left: 1%;
+  padding-top: 10%;
+  margin: 0;
+  height: 680vh;
+  background-image: url(../../assets/img/background-blank-empty-light-62693.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+
+h3 {
+  font-size: 1rem;
+
+  display: flex;
+
+}
+
+.main_container {
+  padding: 0;
+  padding-left: 2%;
+  margin: 0;
+  border-top: 2px dotted black;
+
+}
+
+#left_side {
+  background-color: #BA0734;
+  margin-top: 1%;
+  height: auto;
+
+}
+
+#right_side {
+  /* background-color: rgba(235, 235, 235, 0.4); */
+  background-color: #00000088;
+  margin-top: 1%;
+}
+
+.aside {
+  height: 100%;
+}
+
+
+
+@media screen and (min-width:961px) {
+  #page4 {
+    height: 200vh;
+  }
+
+
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  #page4 {
+    height: 130vh;
+  }
+
+  aside {
+    justify-content: end;
+  }
+}
