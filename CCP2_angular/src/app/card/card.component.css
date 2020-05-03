@@ -16,6 +16,10 @@ body {
   margin: 0
 }
 
+#design {
+  margin-left: 20%;
+}
+
 .container {
   height: 250px;
   max-width: 1230px;
