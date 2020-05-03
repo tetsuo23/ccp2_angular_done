@@ -25,6 +25,7 @@ const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
   { path: 'card', component: CardComponent },
   { path: 'admin/post/create', component: PostCreateComponent },
+  { path: 'mod/post/create', component: PostCreateComponent },
   { path: 'admin/post/:id', component: PostEditComponent },
   { path: 'post/:id', component: PostEditComponent },
   { path: 'adminPost', component: AdminPostComponent },

@@ -111,14 +111,14 @@
         <ul class="navbar-nav mr-auto navlinks col-6 offset-6 col-xl-11 offset-xl-1" routerLinkActive="active">
 
           <div class="row d-flex justify-content-center nav2_text">
-            <li class="nav-item col-6 col-md-9" *ngIf="isLoggedIn">
+            <li class="nav-item col-6 col-md-9" *ngIf="showAdminBoard">
               <a href="/admin" class="nav-link" routerLink="admin">
                 <p>Admin Board</p>
               </a>
             </li>
-            <li class="nav-item col-7 col-md-6" *ngIf="showModeratorBoard">
+            <li class="nav-item col-7 col-md-9" *ngIf="showModeratorBoard">
               <a href="/mod" class="nav-link" routerLink="mod">
-                <p>Moderator Board</p>
+                <p>Editorial Board</p>
               </a>
             </li>
             <!-- <li class="nav-item col-2 col-xl-3" *ngIf="isLoggedIn">
